@@ -1,5 +1,8 @@
 {
-  "name": "ws",
+  "name": "@circuitly/ws",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "8.13.0",
   "description": "Simple to use, blazing fast and thoroughly tested websocket client and server for Node.js",
   "keywords": [
@@ -16,14 +19,6 @@
   "author": "Einar Otto Stangvik <einaros@gmail.com> (http://2x.io)",
   "license": "MIT",
   "main": "index.js",
-  "exports": {
-    ".": {
-      "browser": "./browser.js",
-      "import": "./wrapper.mjs",
-      "require": "./index.js"
-    },
-    "./package.json": "./package.json"
-  },
   "browser": "browser.js",
   "engines": {
     "node": ">=10.0.0"
@@ -31,8 +26,7 @@
   "files": [
     "browser.js",
     "index.js",
-    "lib/*.js",
-    "wrapper.mjs"
+    "lib/*.js"
   ],
   "scripts": {
     "test": "nyc --reporter=lcov --reporter=text mocha --throw-deprecation test/*.test.js",
